@@ -21,3 +21,16 @@ export interface ButtonProps {
     disabled?: boolean;
     onClick: () => void;
 }
+
+export interface ListItemProps {
+    guid: string;
+    name: string;
+    sum: number;
+    term?: number;
+    percent?: number;
+}
+
+export interface ListProps {
+    items: ListItemProps[];
+    onDelete: (name: string) => void;
+}
