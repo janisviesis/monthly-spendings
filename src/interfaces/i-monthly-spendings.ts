@@ -34,3 +34,23 @@ export interface ListProps {
     items: ListItemProps[];
     onDelete: (name: string) => void;
 }
+
+export interface TableColumnProps {
+    name: string;
+    label: string;
+    minWidth: number;
+    align: "left" | "right" | "inherit" | "center" | "justify" | undefined;
+}
+
+export interface TableDataProps {
+    date: string;
+    remainder: number;
+    payment: number;
+    percent: number;
+    total: number;
+}
+
+export interface TableProps {
+    columns: any[];
+    data: any[];
+}

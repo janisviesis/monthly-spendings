@@ -17,3 +17,36 @@ export const InputFields = [
         endAdornment: '%',
     }
 ];
+
+export const TableFields = [
+    {
+        name: 'date',
+        label: 'Mēnesis',
+        minWidth: 170,
+        align: 'left',
+    },
+    {
+        name: 'remainder',
+        label: 'Atlikusī summa',
+        minWidth: 170,
+        align: 'left',
+    },
+    {
+        name: 'payment',
+        label: 'Saistību maksājums',
+        minWidth: 170,
+        align: 'left',
+    },
+    {
+        name: 'percent',
+        label: 'Procentu maksājums',
+        minWidth: 170,
+        align: 'left',
+    },
+    {
+        name: 'total',
+        label: 'Kopējais maksājums',
+        minWidth: 170,
+        align: 'right',
+    }
+];
