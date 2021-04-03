@@ -25,9 +25,9 @@ const ItemTable: FC<TableProps> = ({
 }) => {
     const classes = useStyles();
     const [page, setPage] = useState(0);
-    const [rowsPerPage, setRowsPerPage] = useState(10);
+    const [rowsPerPage, setRowsPerPage] = useState(12);
 
-    const handleChangePage = (newPage: number) => {
+    const handleChangePage = (event: unknown, newPage: number) => {
         setPage(newPage);
     };
 
@@ -72,12 +72,12 @@ const ItemTable: FC<TableProps> = ({
                 </Table>
             </TableContainer>
             <TablePagination
-                rowsPerPageOptions={[10, 25, 50, 100]}
+                rowsPerPageOptions={[12, 24, 36, 48, 60]}
                 component="div"
                 count={data.length}
                 rowsPerPage={rowsPerPage}
                 page={page}
-                onChangePage={() => handleChangePage}
+                onChangePage={handleChangePage}
                 onChangeRowsPerPage={handleChangeRowsPerPage}
             />
         </Paper>

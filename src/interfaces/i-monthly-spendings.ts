@@ -26,8 +26,8 @@ export interface ListItemProps {
     guid: string;
     name: string;
     sum: number;
-    term?: number;
-    percent?: number;
+    term: number;
+    percent: number;
 }
 
 export interface ListProps {
