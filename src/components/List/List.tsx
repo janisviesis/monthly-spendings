@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import {
     List,
     ListItem,
@@ -23,7 +23,7 @@ const ItemList: FC<ListProps> = ({
                         <ListItemText
                             id={labelId}
                             primary={item.name}
-                            secondary={item.sum}
+                            secondary={`${item.sum}€ ${item.term}mēn ${item.percent}%`}
                         />
                         <ListItemSecondaryAction>
                             <IconButton

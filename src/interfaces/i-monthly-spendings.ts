@@ -2,23 +2,22 @@ export interface FieldProps {
     name: string;
     label: string;
     placeholder?: string;
-    value?: any;
+    value?: string;
     endAdornment?: string;
+    type?: string;
     error?: boolean;
     helperText?: string;
-    autoFocus?: boolean;
-    onChange(field: string, value: any): void;
+    onChange(field: string, value: string): void;
 }
 
 export interface InputProps {
-    fields: any[];
-    onChange(field: string, value: any): void;
+    fields: FieldProps[];
+    onChange(field: string, value: string): void;
     onSubmit: () => void;
 }
 
 export interface ButtonProps {
     text: string;
-    disabled?: boolean;
     onClick: () => void;
 }
 

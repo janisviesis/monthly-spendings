@@ -1,30 +1,33 @@
-import React, { FC } from 'react';
+import { FC, useState, useEffect } from 'react';
 import { TextField, InputAdornment } from '@material-ui/core';
 import { FieldProps } from 'interfaces/i-monthly-spendings';
 
 const Field: FC<FieldProps> = ({
     name,
     label,
-    placeholder,
     value,
     endAdornment,
     error,
     helperText,
-    autoFocus,
     onChange,
 }) => {
+    const [inputValue, setInputValue] = useState(value);
+
+    useEffect(() => {
+        setInputValue(value);
+    }, [value]);
+
     return (
         <TextField
             variant="outlined"
             fullWidth
             name={name}
             label={label}
-            placeholder={placeholder}
-            value={value}
+            value={inputValue}
             error={error}
             helperText={helperText}
-            autoFocus={autoFocus}
-            onChange={(e) => onChange(name, e.currentTarget.value)}
+            onChange={(e) => setInputValue(e.currentTarget.value)}
+            onBlur={(e) => onChange(name, e.currentTarget.value)}
             InputProps={{
                 endAdornment: (
                     endAdornment

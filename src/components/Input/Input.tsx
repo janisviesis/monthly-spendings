@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { makeStyles, Grid } from '@material-ui/core';
 import { InputProps } from 'interfaces/i-monthly-spendings';
 import Field from '../Field';
@@ -27,6 +27,9 @@ const Input: FC<InputProps> = ({
                     <Field
                         name={field.name}
                         label={field.label}
+                        value={field.value}
+                        error={field.error}
+                        helperText={field.helperText}
                         endAdornment={field.endAdornment}
                         onChange={onChange}
                     />
@@ -37,7 +40,6 @@ const Input: FC<InputProps> = ({
             >
                 <Button
                     text="Pievienot saistības"
-                    disabled={false}
                     onClick={onSubmit}
                 />
             </Grid>
