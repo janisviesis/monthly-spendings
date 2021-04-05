@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `yarn install`
 
-Installs all the necessary dependencies.\
+Installs all the necessary dependencies.
 
 ### `yarn start`
 
