@@ -60,3 +60,5 @@ export const TableFields = [
         align: 'right',
     }
 ];
+
+export const RowsPerPageOptions = [12, 24, 36, 48, 60];

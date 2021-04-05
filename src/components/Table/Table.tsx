@@ -11,13 +11,14 @@ import {
     TableRow,
 } from '@material-ui/core';
 import { TableProps } from 'interfaces/i-monthly-spendings';
+import { RowsPerPageOptions } from 'variables/constants';
 
 const useStyles = makeStyles({
     root: {
         margin: 10,
     },
     container: {
-        maxHeight: 440,
+        maxHeight: '100vh',
     },
 });
 
@@ -41,7 +42,7 @@ const ItemTable: FC<TableProps> = ({
     return (
         <Paper className={classes.root}>
             <TableContainer className={classes.container}>
-                <Table stickyHeader aria-label="sticky table">
+                <Table stickyHeader aria-label="sticky table" size="small">
                     <TableHead>
                         <TableRow>
                             {columns.map((column) => (
@@ -74,7 +75,7 @@ const ItemTable: FC<TableProps> = ({
                 </Table>
             </TableContainer>
             <TablePagination
-                rowsPerPageOptions={[12, 24, 36, 48, 60]}
+                rowsPerPageOptions={RowsPerPageOptions}
                 component="div"
                 count={data.length}
                 rowsPerPage={rowsPerPage}

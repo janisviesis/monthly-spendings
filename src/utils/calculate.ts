@@ -9,7 +9,7 @@ const formatNumber = (arg: number) => {
     return arg.toFixed(2);
 };
 
-export function calculate(list: ListItemProps[]) {
+export function calcTableData(list: ListItemProps[]) {
     const newList: any = [];
     list.forEach(item => {
         for (let i = 0; i < item.term; i++) {
